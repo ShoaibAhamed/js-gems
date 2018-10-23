@@ -1,0 +1,49 @@
+<script>
+var array = ["Hello","where","am","I","going","?","Hello", "where", "Hello"];
+
+// console.log(array[0]);
+
+// for(var i = 0; i<array.length; i++){
+
+// 	console.log(array[i]);
+// }
+
+// if (array[0] === array [3]){
+// 	console.log(array[0]);
+
+// }
+
+// write a program that finds all the duplicate words in an array.
+
+// for (var i = 0; i < array.length; i++){
+
+// 	for(var j = i+1; j<array.length; j++){
+
+// 		if (array[i] === array[j]){
+
+// 			console.log(array[i]);
+// 		} 
+// 	}
+// }
+
+//finding the duplicate word finishes.
+
+
+var sentence = "hey where am I going? hey where";
+sentence = sentence.replace(/[.,\/#?!$%\^&\*;:{}=\-_`~()]/g,"");
+var words = sentence.split(' ');
+// console.log(words);
+// console.log(words[0]);
+
+for (var i = 0; i < words.length; i++){
+
+	for(var j = i+1; j<words.length; j++){
+
+		if (words[i] === words[j]){
+
+			console.log(words[i]);
+		} 
+	}
+}
+
+</script>

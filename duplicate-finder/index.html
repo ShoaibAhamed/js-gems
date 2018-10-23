@@ -1,0 +1,34 @@
+<!-- // the following program returns all the duplicate words in a sentence and the first duplicate one. -->
+<html>
+<div id = "div1">
+<h1> Write to find the duplicate word(s):</h1>
+<input id = "input" size = "100"></input><br><br>
+<button onclick = findDuplicates()>find duplicate word</button>
+<p id = "result"></p>
+<p id = "first"></p>
+<p id = "refresh" style ="color:red"></p>
+</div>
+<script>
+var sentence;
+var totalWords = [];
+function findDuplicates(){
+	sentence = document.getElementById('input').value;
+	// console.log(sentence);
+	sentence = sentence.replace(/[.,\/#?!$%\^&\*;:{}=\-_`~()]/g,"");
+	var words = sentence.split(' ');
+	for (var i = 0; i < words.length; i++){
+	for(var j = i+1; j<words.length; j++){
+		if (words[i] === words[j]){
+			totalWords.push(words[i]);
+		}  
+	} 
+} 
+document.getElementById('result').innerHTML = "All the duplicates word(s) of this sentence : " + totalWords;
+document.getElementById('first').innerHTML ="The duplicate word of this sentence : " + totalWords[0];
+document.getElementById('refresh').innerHTML = "Please refresh the page before inserting the next sentence."
+
+} 
+
+</script>
+
+</html>
